@@ -51,23 +51,26 @@ class CfgVehicles
 			};
 		};
 	};
-	class TerjeDrinkMadBull: TerjeEnergyDrink
+	//Manaos Cola. #Dambro182
+	class TerjeManaos: TerjeEnergyDrink
 	{
 		scope=2;
 		medSleepingIncrementValue = 8;
 		medSleepingIncrementTimeSec = 1.0; // Time per 1ml
-		displayName="#STR_TERJEDRINK_MADBULL_NAME";
-		descriptionShort="#STR_TERJEDRINK_MADBULL_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\madbull.paa"};
+		displayName="Manaos Cola";
+		descriptionShort="Manaos Cola Bien Fria";
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\Manaos_cola.paa"};
 	};
-	class TerjeDrinkGang: TerjeEnergyDrink
+	//Cerveza #Baja el valor del sueño. #Dambro182
+	//Hacer que de mareos si tomas mucho (Futura Feature)
+	class TerjeBeer: TerjeEnergyDrink
 	{
 		scope=2;
-		medSleepingIncrementValue = 6;
+		medSleepingIncrementValue = -6;
 		medSleepingIncrementTimeSec = 1.0; // Time per 1ml
-		displayName="#STR_TERJEDRINK_GANG_NAME";
-		descriptionShort="#STR_TERJEDRINK_GANG_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\gang.paa"};
+		displayName="Survivor Ipa";
+		descriptionShort="Elaborada con ingredientes de dudosa procedencia y un sabor que te recuerda que todavía estás vivo. Ideal para acompañar una fogata, celebrar un buen Raid o lamentar esa muerte absurda después de tres horas de supervivencia.";
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\DayZ_ipa.paa"};
 	};
 	class TerjeDrinkYaguar: TerjeEnergyDrink
 	{
@@ -98,20 +101,20 @@ class CfgVehicles
 	};
 
 	class HouseNoDestruct;
-
-	class StaticObj_TerjeDrinkMadBull: HouseNoDestruct
+//Texturas de los objetos estaticos para colocar por el mapa. #Dambro182
+	class StaticObj_TerjeManaos: HouseNoDestruct
 	{
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\madbull.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\Manaos_cola.paa"};
 	};
-	class StaticObj_TerjeDrinkGang: HouseNoDestruct
+	class StaticObj_TerjeBeer: HouseNoDestruct
 	{
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\gang.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\DayZ_ipa.paa"};
 	};
 	class StaticObj_TerjeDrinkYaguar: HouseNoDestruct
 	{
